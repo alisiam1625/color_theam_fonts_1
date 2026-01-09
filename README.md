@@ -36,7 +36,7 @@ Add to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  color_theme_fonts: ^0.1.8
+  color_theme_fonts: ^0.2.0
   google_fonts:   # Recommended for typography
   flutter_screenutil:
 ```
