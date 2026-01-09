@@ -1,8 +1,9 @@
 name: color_theme_fonts
-description: "A new Flutter package project."
-# repository: https://github.com/alisiam1625/color_theam_fonts_1
-version: 0.0.5
-# homepage:
+description: "color_theme_font"
+repository: https://github.com/alisiam1625/color_theam_fonts_1
+homepage: https://github.com/alisiam1625/color_theam_fonts_1
+version: 0.1.2
+license: MIT
 
 environment:
   sdk: ^3.5.0
