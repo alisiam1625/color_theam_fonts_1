@@ -36,13 +36,24 @@ Add to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  color_theme_fonts: ^0.1.6
+  color_theme_fonts: ^0.1.8
   google_fonts:   # Recommended for typography
   flutter_screenutil:
 ```
 ّّّ
 
 ---
+
+
+## 📱 Contact & Connect
+
+**Follow us on Instagram for more examples and updates:**
+
+[![Instagram](https://img.shields.io/badge/Instagram-%40king__flutter-E4405F?logo=instagram&logoColor=white)](https://instagram.com/king_flutter)
+
+
+
+
 
 ## 🎬 Preview
 
@@ -55,11 +66,6 @@ dependencies:
 </p>
 
 ---
-## 📱 Contact & Connect
-
-**Follow us on Instagram for more examples and updates:**
-
-[![Instagram](https://img.shields.io/badge/Instagram-%40alisiam__1625-E4405F?logo=instagram&logoColor=white)](https://instagram.com/alisiam_1625)
 
 
 ## 🧪 Example
