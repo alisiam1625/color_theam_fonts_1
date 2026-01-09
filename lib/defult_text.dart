@@ -116,10 +116,10 @@ class TextThemeDefaults {
     // التحقق من الطول فقط
     if (newStyles.length == _defaultLightStyles.length) {
       _currentLightStyles = List.from(newStyles);
-      print("Light text styles updated successfully.");
+      // print("Light text styles updated successfully.");
     } else {
       _currentLightStyles = List.from(_defaultLightStyles);
-      print("Invalid light text styles. Reverting to default.");
+      // print("Invalid light text styles. Reverting to default.");
     }
   }
 
@@ -161,10 +161,10 @@ class TextThemeDefaults {
 
     if (newStyles.length == _defaultDarkStyles.length) {
       _currentDarkStyles = List.from(newStyles);
-      print("Dark text styles updated successfully.");
+      // print("Dark text styles updated successfully.");
     } else {
       _currentDarkStyles = List.from(_defaultDarkStyles);
-      print("Invalid dark text styles. Reverting to default.");
+      // print("Invalid dark text styles. Reverting to default.");
     }
   }
   /*

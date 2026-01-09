@@ -1,45 +1,44 @@
 import 'package:flutter/material.dart';
 
 class AppColorsManager {
-
   static List<Color> defaultLightColors = [
-    Colors.purple, 
+    Colors.purple,
     Colors.white,
     Colors.amber,
     Colors.white,
     Colors.white,
-    const Color.fromARGB(255, 157, 43, 35),
     Colors.white,
-    Colors.black, 
-    Colors.black, 
-    Colors.white, 
-    Colors.white, 
-    Colors.grey, 
-    Colors.blue, 
-    Colors.green, 
-    Colors.red, 
-    Colors.orange, 
+    
+    Colors.white,
+    Colors.black,
+    Colors.black,
+    Colors.white,
+    Colors.white,
+    Colors.grey,
+    Colors.blue,
+    Colors.green,
+    Colors.red,
+    Colors.orange,
   ];
 
-
   static List<Color> defaultDarkColors = [
-    Colors.cyan, 
+    Colors.cyan,
     Colors.green,
     Colors.teal,
     Colors.green,
     Colors.black,
-    Colors.black, 
+    Colors.black,
     Colors.red,
-    Colors.black, 
+    Colors.black,
     Colors.white,
-    Colors.white, 
-    Colors.black, 
-    Colors.black, 
+    Colors.white,
+    Colors.black,
+    Colors.black,
     Colors.grey,
-    Colors.purple, 
-    Colors.yellow, 
-    Colors.pink, 
-    Colors.lime, 
+    Colors.purple,
+    Colors.yellow,
+    Colors.pink,
+    Colors.lime,
   ];
 
   static List<Color> _currentLightColors = List.from(defaultLightColors);
@@ -80,8 +79,6 @@ class AppColorsManager {
   static Color get darkColor2 => _currentDarkColors[14];
   static Color get darkColor3 => _currentDarkColors[15];
   static Color get darkColor4 => _currentDarkColors[16];
-
-
 
   static void updateLightPrimary(Color color) {
     _currentLightColors[0] = color;
@@ -257,18 +254,7 @@ class AppColorsManager {
       optionColor3,
       optionColor4,
     ];
-    if (newColors != null && newColors.length == defaultLightColors.length) {
-
-
-
-
-
-
-
-
-
-
-      
+    if (newColors.length == defaultLightColors.length) {
       _currentLightColors = List.from(newColors);
     } else {
       _currentLightColors = List.from(defaultLightColors);
@@ -314,12 +300,12 @@ class AppColorsManager {
       optionColor4,
     ];
 
-    if (newColors != null && newColors.length == defaultDarkColors.length) {
+    if (newColors.length == defaultDarkColors.length) {
       _currentDarkColors = List.from(newColors);
-      print("color styles updated successfully.---------------");
+      // print("color styles updated successfully.---------------");
     } else {
       _currentDarkColors = List.from(defaultDarkColors);
-      print("color styles. Reverting to default.---------------");
+      // print("color styles. Reverting to default.---------------");
     }
   }
 }

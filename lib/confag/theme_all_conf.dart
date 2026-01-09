@@ -28,7 +28,7 @@ class AllTheme {
         onError: AppColors.getOnErrorColor(false),
       ),
       appBarTheme: AppBarTheme(
-        color: AppColors.getPrimaryColor(false),
+        backgroundColor: AppColors.getPrimaryColor(false),
         iconTheme: IconThemeData(color: AppColors.getOnPrimaryColor(false)),
       ),
       buttonTheme: ButtonThemeData(
