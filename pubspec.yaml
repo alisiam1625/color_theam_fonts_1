@@ -2,7 +2,8 @@ name: color_theme_fonts
 description: "color_theme_font"
 repository: https://github.com/alisiam1625/color_theam_fonts_1
 homepage: https://github.com/alisiam1625/color_theam_fonts_1
-version: 0.1.2
+issue_tracker: https://github.com/alisiam1625/color_theme_fonts_1/issues
+version: 0.1.7
 license: MIT
 
 environment:

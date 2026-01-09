@@ -21,7 +21,7 @@ samples, guidance on mobile development, and a full API reference.
 > Ultimate Flutter Theme Manager
 
 ## 🎬 Preview
-<img src="https://raw.githubusercontent.com/USERNAME/color_theme_fonts/main/example/assets/theme_preview.gif" width="300"/>
+<img src="https://github.com/alisiam1625/color_theam_fonts_1/blob/main/example/assets/theme_preview.gif" width="300"/>
 
 ## ✨ Features
 ...

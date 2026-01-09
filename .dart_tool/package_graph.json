@@ -5,7 +5,7 @@
   "packages": [
     {
       "name": "color_theme_fonts",
-      "version": "0.1.2",
+      "version": "0.1.7",
       "dependencies": [
         "flutter",
         "flutter_color_picker_plus",

@@ -5,59 +5,168 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Platform](https://img.shields.io/badge/platform-iOS%20%7C%20Android%20%7C%20Web%20%7C%20Desktop-lightgrey)](https://flutter.dev)
 
+> A powerful Flutter package for seamless theme management, color palettes, typography, and dark/light mode support.
 
-
-## 🎬 Preview
-
-<p align="center">
-  <img
-    src="https://raw.githubusercontent.com/USERNAME/REPO_NAME/main/example/assets/theme_preview.gif"
-    width="300"
-    alt="Theme Preview"
-  />
-</p>
-
----
 
 
 ## ✨ Features
 
 ### 🎨 **Smart Color Management**
 - **Automatic Dark/Light Mode** with smooth transitions
-- **30+ Pre-defined Color Palettes** (Material Design, Professional, Gradients)
-- **Accessibility Ready** - WCAG compliant contrasts
+- **Custom Color Palettes** with easy configuration
+- **Accessibility Ready** with proper contrast ratios
 - **Dynamic Theme Switching** at runtime
 
 ### 📱 **Advanced Typography**
 - **Google Fonts Integration** (1000+ fonts)
 - **Responsive Text Scaling** for all screen sizes
-- **Consistent Text Themes** across your app
-- **Custom Font Family** support
+- **Custom Text Theme** management
+- **Consistent Typography** across your app
 
 ### 🔧 **Easy to Use**
-- **Zero Boilerplate** - Get started in minutes
+- **Zero Boilerplate** setup
 - **Hot Reload Friendly** - See changes instantly
-- **Well Documented** - Clear examples and API
 - **Production Ready** - Tested and stable
-
-
-
-## 🧪 Example
-The full runnable example is here:
-[example/lib/main.dart](https://github.com/USERNAME/REPO_NAME/blob/main/example/lib/main.dart)
-
-
-
+- **Well Documented** - Clear examples and API
 
 
 ## 📦 Installation
 
-Add this to your `pubspec.yaml` file:
+Add to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  color_theme_fonts: ^0.0.1
+  color_theme_fonts: ^0.1.6
+  google_fonts:   # Recommended for typography
+  flutter_screenutil:
+```
+ّّّ
+
+---
+
+## 🎬 Preview
+
+<p align="center">
+  <img
+    src="https://raw.githubusercontent.com/alisiam1625/color_theam_fonts_1/main/example/assets/theme_preview.gif"
+    width="300"
+    alt="Theme Preview"
+  />
+</p>
+
+---
+## 📱 Contact & Connect
+
+**Follow us on Instagram for more examples and updates:**
+
+[![Instagram](https://img.shields.io/badge/Instagram-%40alisiam__1625-E4405F?logo=instagram&logoColor=white)](https://instagram.com/alisiam_1625)
 
 
+## 🧪 Example
+```dart
+import 'package:color_theme_fonts/confag/color/color.dart';
+import 'package:color_theme_fonts/confag/color/config_color.dart';
+import 'package:color_theme_fonts/confag/theme_all_conf.dart';
+import 'package:color_theme_fonts/defult_text.dart';
+import 'package:flutter/material.dart';
+import 'package:color_theme_fonts/color_theme_fonts.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  bool _isDarkMode = false;
+
+  @override
+  Widget build(BuildContext context) {
+    // Configure theme
 
 
+    return ScreenUtilInit(
+      designSize: Size(360, 690),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (context, child) {
+    TextThemeDefaults.updateLightTextStyles(
+      displayLarge: GoogleFonts.bebasNeue(fontSize:  30.sp, color: const Color.fromARGB(255, 223, 92, 92)),
+      headlineLarge: GoogleFonts.bebasNeue(fontSize:  20.sp, color: Colors.black),
+    );
+
+    AppColorsManager.updateLightColors(
+      primary: const Color.fromARGB(255, 252, 2, 210),
+      secondary: Colors.green,
+      background: const Color.fromARGB(255, 221, 30, 30),
+    );
+        return MaterialApp(
+          theme: AllTheme.lightTheme(),
+          darkTheme: AllTheme.darkTheme(),
+          themeMode: _isDarkMode ? ThemeMode.light : ThemeMode.dark,
+
+          home: child,
+        );
+      },
+      child: HomeScreen(
+        isDarkMode: _isDarkMode,
+        onThemeChanged: (value) {
+          setState(() {
+            _isDarkMode = value;
+          });
+        },
+      ),
+    );
+    
+    
+    
+    
+    
+
+  }
+}
+
+class HomeScreen extends StatelessWidget {
+  final bool isDarkMode;
+  final ValueChanged<bool> onThemeChanged;
+
+  const HomeScreen({
+    super.key,
+    required this.isDarkMode,
+    required this.onThemeChanged,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
+
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Theme Switcher'),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text('Toggle Theme'),
+            Switch(
+              value: isDarkMode,
+              onChanged: onThemeChanged,
+            ),
+            const SizedBox(height: 20),
+            Text('Display Large', style: textTheme.displayLarge),
+            Text('Headline Large', style: textTheme.headlineLarge),
+            Text('Body Large', style: textTheme.bodyLarge),
+          ],
+        ),
+      ),
+      // backgroundColor: AppColors.getLightColor2(isDarkMode),
+    );
+  }
+}
