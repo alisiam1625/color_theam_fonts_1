@@ -1,4 +1,13 @@
 
+/*
+
+dart pub login
+flutter pub publish --dry-run
+flutter pub publish
+*/
+
+
+
 
 import 'package:color_theme_fonts/confag/theme_all_conf.dart';
 import 'package:color_theme_fonts_example/homepage.dart';
