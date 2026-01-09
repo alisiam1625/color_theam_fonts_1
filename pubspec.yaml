@@ -1,4 +1,4 @@
-name: color_theam_fonts
+name: color_theme_fonts
 description: "A new Flutter package project."
 version: 0.0.1
 homepage:
@@ -10,7 +10,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_color_picker_plus: ^2.2.1
   google_fonts: ^6.2.1
+  shared_preferences: ^2.5.4
 
 
 dev_dependencies:

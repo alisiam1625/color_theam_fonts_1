@@ -1,28 +1,20 @@
-
-import 'package:color_theam_fonts/text_them_defult.dart';
+import 'package:color_theam_fonts/text_theme_defult.dart';
 import 'package:flutter/material.dart';
 
 
-import '../responsive_helper.dart';
 import 'color/color.dart';
 
-class AllTheam {
-  static ThemeData lightTheme(ResponsiveHelper helper) {
-  
+class AllTheme {
+  static ThemeData lightTheme() {
     return ThemeData(
-    scaffoldBackgroundColor: AppColors.getBackgroundColor(false),
-    brightness: Brightness.light,
-    primaryColor: AppColors.getPrimaryColor(false),
-    textTheme: TTextTheme.lightTextTheme(helper),
-    
-
+      scaffoldBackgroundColor: AppColors.getBackgroundColor(false),
+      brightness: Brightness.light,
+      primaryColor: AppColors.getPrimaryColor(false),
+      textTheme: TTextTheme.lightTextTheme(),
       secondaryHeaderColor: AppColors.getSecondaryColor(false),
-    
       cardColor: AppColors.getCardColor(false),
       shadowColor: AppColors.getShadowColor(false),
-
       colorScheme: ColorScheme.light(
-        
         primary: AppColors.getPrimaryColor(false),
         primaryContainer: AppColors.getPrimaryContainerColor(false),
         secondary: AppColors.getSecondaryColor(false),
@@ -60,23 +52,19 @@ class AllTheam {
     );
   }
 
-  static ThemeData darkTheme(ResponsiveHelper helper) {
-   
+  static ThemeData darkTheme() {
     final backgroundColor = AppColors.getBackgroundColor(true);
 
     return ThemeData(
-
-brightness: Brightness.dark,
+      brightness: Brightness.dark,
       scaffoldBackgroundColor: backgroundColor,
       primaryColor: AppColors.getPrimaryColor(true),
       primaryColorLight: AppColors.getPrimaryContainerColor(true),
       secondaryHeaderColor: AppColors.getSecondaryColor(true),
-  
       cardColor: AppColors.getCardColor(true),
-    
       shadowColor: AppColors.getShadowColor(true),
       primaryColorDark: AppColors.getBackgroundColor(true),
-      textTheme: TTextTheme.darkTextTheme(helper),
+      textTheme: TTextTheme.darkTextTheme(),
       colorScheme: ColorScheme.dark(
         primary: AppColors.getPrimaryColor(true),
         primaryContainer: AppColors.getPrimaryContainerColor(true),
@@ -90,7 +78,7 @@ brightness: Brightness.dark,
         onError: AppColors.getOnErrorColor(true),
       ),
       appBarTheme: AppBarTheme(
-        color: AppColors.getPrimaryColor(true),
+        backgroundColor: AppColors.getPrimaryColor(true),
         iconTheme: IconThemeData(color: AppColors.getOnPrimaryColor(true)),
       ),
       buttonTheme: ButtonThemeData(

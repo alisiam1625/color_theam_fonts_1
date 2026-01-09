@@ -1,47 +1,45 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class TTextThemeDefaults {
-  // Default text styles for light and dark themes
-  static final List<TextStyle> _defaultLightStyles = [
-    GoogleFonts.montserrat(color: Colors.black87, fontSize: 16),  // displayMedium
-    GoogleFonts.poppins(color: Colors.deepPurple, fontSize: 20),  // titleSmall
-    GoogleFonts.tillana(color: Colors.black, fontSize: 30),       // headlineMedium
-    GoogleFonts.bebasNeue(color: Colors.black, fontSize: 70),     // displayLarge
-    GoogleFonts.bebasNeue(color: Colors.black, fontSize: 40),     // headlineLarge
-    GoogleFonts.aBeeZee(color: Colors.black, fontSize: 20),       // displaySmall
-    GoogleFonts.roboto(color: Colors.black, fontSize: 24),        // headlineSmall
-    GoogleFonts.roboto(color: Colors.black, fontSize: 34),        // titleLarge
-    GoogleFonts.roboto(color: Colors.black, fontSize: 28),        // titleMedium
-    GoogleFonts.roboto(color: Colors.black, fontSize: 18),        // bodyLarge
-    GoogleFonts.roboto(color: Colors.black, fontSize: 16),        // bodyMedium
-    GoogleFonts.roboto(color: Colors.black, fontSize: 14),        // bodySmall
-    GoogleFonts.roboto(color: Colors.black, fontSize: 14),        // labelLarge
-    GoogleFonts.roboto(color: Colors.black, fontSize: 12),        // labelMedium
-    GoogleFonts.roboto(color: Colors.black, fontSize: 10),        // labelSmall
+class TextThemeDefaults {
+
+ static final List<TextStyle> _defaultLightStyles = [
+    GoogleFonts.montserrat(color: Colors.black, fontSize: 16), // [0] displayMedium
+    GoogleFonts.poppins(color: Colors.black, fontSize: 16),    // [1] titleSmall
+    GoogleFonts.tillana(color: Colors.black, fontSize: 20),      // [2] headlineMedium
+    GoogleFonts.bebasNeue(color: Colors.black, fontSize: 70),    // [3] displayLarge
+    GoogleFonts.bebasNeue(color: Colors.black, fontSize: 40),    // [4] headlineLarge
+    GoogleFonts.aBeeZee(color: Colors.black, fontSize: 20),      // [5] displaySmall
+    GoogleFonts.roboto(color: Colors.black, fontSize: 24),       // [6] headlineSmall
+    GoogleFonts.roboto(color: Colors.black, fontSize: 34),       // [7] titleLarge
+    GoogleFonts.roboto(color: Colors.black, fontSize: 28),       // [8] titleMedium
+    GoogleFonts.roboto(color: Colors.black, fontSize: 18),       // [9] bodyLarge
+    GoogleFonts.roboto(color: Colors.black, fontSize: 16),       // [10] bodyMedium
+    GoogleFonts.roboto(color: Colors.black, fontSize: 14),       // [11] bodySmall
+    GoogleFonts.roboto(color: Colors.black, fontSize: 14),       // [12] labelLarge
+    GoogleFonts.roboto(color: Colors.black, fontSize: 12),       // [13] labelMedium
+    GoogleFonts.roboto(color: Colors.black, fontSize: 10),       // [14] labelSmall
   ];
 
   static final List<TextStyle> _defaultDarkStyles = [
-    GoogleFonts.montserrat(color: const Color.fromARGB(255, 244, 103, 103), fontSize: 16),   // displayMedium
-    GoogleFonts.poppins(color: Colors.deepPurple, fontSize: 20), // titleSmall
-    GoogleFonts.tillana(color: Colors.white, fontSize: 30),      // headlineMedium
-    GoogleFonts.bebasNeue(color: Colors.white, fontSize: 70),    // displayLarge
-    GoogleFonts.bebasNeue(color: Colors.white, fontSize: 40),    // headlineLarge
-    GoogleFonts.aBeeZee(color: Colors.white, fontSize: 20),      // displaySmall
-    GoogleFonts.roboto(color: Colors.white, fontSize: 24),       // headlineSmall
-    GoogleFonts.roboto(color: Colors.white, fontSize: 34),       // titleLarge
-    GoogleFonts.roboto(color: Colors.white, fontSize: 28),       // titleMedium
-    GoogleFonts.roboto(color: Colors.white, fontSize: 18),       // bodyLarge
-    GoogleFonts.roboto(color: Colors.white, fontSize: 16),       // bodyMedium
-    GoogleFonts.roboto(color: Colors.white, fontSize: 14),       // bodySmall
-    GoogleFonts.roboto(color: Colors.white, fontSize: 14),       // labelLarge
-    GoogleFonts.roboto(color: Colors.white, fontSize: 12),       // labelMedium
-    GoogleFonts.roboto(color: const Color.fromARGB(255, 4, 31, 234), fontSize: 10),       // labelSmall
+    GoogleFonts.montserrat(color: Colors.white, fontSize: 16),  // [0] displayMedium
+    GoogleFonts.poppins(color: Colors.white, fontSize: 20),     // [1] titleSmall
+    GoogleFonts.tillana(color: Colors.white, fontSize: 30),     // [2] headlineMedium
+    GoogleFonts.bebasNeue(color: Colors.white, fontSize: 70),   // [3] displayLarge
+    GoogleFonts.bebasNeue(color: Colors.white, fontSize: 40),   // [4] headlineLarge
+    GoogleFonts.aBeeZee(color: Colors.white, fontSize: 20),     // [5] displaySmall
+    GoogleFonts.roboto(color: Colors.white, fontSize: 24),      // [6] headlineSmall
+    GoogleFonts.roboto(color: Colors.white, fontSize: 34),      // [7] titleLarge
+    GoogleFonts.roboto(color: Colors.white, fontSize: 28),      // [8] titleMedium
+    GoogleFonts.roboto(color: Colors.white, fontSize: 18),      // [9] bodyLarge
+    GoogleFonts.roboto(color: Colors.white, fontSize: 16),      // [10] bodyMedium
+    GoogleFonts.roboto(color: Colors.white, fontSize: 14),      // [11] bodySmall
+    GoogleFonts.roboto(color: Colors.white, fontSize: 14),      // [12] labelLarge
+    GoogleFonts.roboto(color: Colors.white, fontSize: 12),      // [13] labelMedium
+    GoogleFonts.roboto(color: Colors.white, fontSize: 10),      // [14] labelSmall
   ];
 
-  // Current styles, starting with the default values
+  // Current styles
   static List<TextStyle> _currentLightStyles = List.from(_defaultLightStyles);
   static List<TextStyle> _currentDarkStyles = List.from(_defaultDarkStyles);
 
@@ -79,9 +77,44 @@ class TTextThemeDefaults {
   static TextStyle get darkLabelMedium => _currentDarkStyles[13];
   static TextStyle get darkLabelSmall => _currentDarkStyles[14];
 
-  // Update methods for light and dark theme styles
-  static void updateLightTextStyles(List<TextStyle>? newStyles) {
-    if (newStyles != null && newStyles.length == _defaultLightStyles.length) {
+
+  static void updateLightTextStyles({
+    TextStyle? displayMedium,
+    TextStyle? titleSmall,
+    TextStyle? headlineMedium,
+    TextStyle? displayLarge,
+    TextStyle? headlineLarge,
+    TextStyle? displaySmall,
+    TextStyle? headlineSmall,
+    TextStyle? titleLarge,
+    TextStyle? titleMedium,
+    TextStyle? bodyLarge,
+    TextStyle? bodyMedium,
+    TextStyle? bodySmall,
+    TextStyle? labelLarge,
+    TextStyle? labelMedium,
+    TextStyle? labelSmall,
+  }) {
+    final List<TextStyle> newStyles = [
+      displayMedium ?? _defaultLightStyles[0],    // displayMedium
+      titleSmall ?? _defaultLightStyles[1],       // titleSmall
+      headlineMedium ?? _defaultLightStyles[2],   // headlineMedium
+      displayLarge ?? _defaultLightStyles[3],     // displayLarge
+      headlineLarge ?? _defaultLightStyles[4],    // headlineLarge
+      displaySmall ?? _defaultLightStyles[5],     // displaySmall
+      headlineSmall ?? _defaultLightStyles[6],    // headlineSmall
+      titleLarge ?? _defaultLightStyles[7],       // titleLarge
+      titleMedium ?? _defaultLightStyles[8],      // titleMedium
+      bodyLarge ?? _defaultLightStyles[9],        // bodyLarge
+      bodyMedium ?? _defaultLightStyles[10],      // bodyMedium
+      bodySmall ?? _defaultLightStyles[11],       // bodySmall
+      labelLarge ?? _defaultLightStyles[12],      // labelLarge
+      labelMedium ?? _defaultLightStyles[13],     // labelMedium
+      labelSmall ?? _defaultLightStyles[14],      // labelSmall
+    ];
+
+    // التحقق من الطول فقط
+    if (newStyles.length == _defaultLightStyles.length) {
       _currentLightStyles = List.from(newStyles);
       print("Light text styles updated successfully.");
     } else {
@@ -90,8 +123,43 @@ class TTextThemeDefaults {
     }
   }
 
-  static void updateDarkTextStyles(List<TextStyle>? newStyles) {
-    if (newStyles != null && newStyles.length == _defaultDarkStyles.length) {
+  static void updateDarkTextStyles({
+    TextStyle? displayMedium,
+    TextStyle? titleSmall,
+    TextStyle? headlineMedium,
+    TextStyle? displayLarge,
+    TextStyle? headlineLarge,
+    TextStyle? displaySmall,
+    TextStyle? headlineSmall,
+    TextStyle? titleLarge,
+    TextStyle? titleMedium,
+    TextStyle? bodyLarge,
+    TextStyle? bodyMedium,
+    TextStyle? bodySmall,
+    TextStyle? labelLarge,
+    TextStyle? labelMedium,
+    TextStyle? labelSmall,
+  }) {
+    final List<TextStyle> newStyles = [  
+      displayMedium ?? _defaultDarkStyles[0],
+      titleSmall ?? _defaultDarkStyles[1],
+      headlineMedium ?? _defaultDarkStyles[2],
+      displayLarge ?? _defaultDarkStyles[3],
+      headlineLarge ?? _defaultDarkStyles[4],
+      displaySmall ?? _defaultDarkStyles[5],
+      headlineSmall ?? _defaultDarkStyles[6],
+      titleLarge ?? _defaultDarkStyles[7],
+      titleMedium ?? _defaultDarkStyles[8],
+      bodyLarge ?? _defaultDarkStyles[9],
+      bodyMedium ?? _defaultDarkStyles[10],
+      bodySmall ?? _defaultDarkStyles[11],
+      labelLarge ?? _defaultDarkStyles[12],
+      labelMedium ?? _defaultDarkStyles[13],
+      labelSmall ?? _defaultDarkStyles[14]
+    ];
+
+
+    if (newStyles.length == _defaultDarkStyles.length) {
       _currentDarkStyles = List.from(newStyles);
       print("Dark text styles updated successfully.");
     } else {
@@ -99,7 +167,7 @@ class TTextThemeDefaults {
       print("Invalid dark text styles. Reverting to default.");
     }
   }
-
+  /*
   // Methods to set individual text styles for light theme
   static void setLightDisplayMedium(TextStyle textStyle) {
     _currentLightStyles[0] = textStyle;
@@ -221,4 +289,6 @@ class TTextThemeDefaults {
   static void setDarkLabelSmall(TextStyle textStyle) {
     _currentDarkStyles[14] = textStyle;
   }
+
+  */
 }

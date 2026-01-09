@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'config_color.dart';
 
+
+
 class AppColors {
 
-  // ألوان الوضع الفاتح
   static Color lightPrimary = AppColorsManager.lightPrimary;
   static Color lightPrimaryContainer = AppColorsManager.lightPrimaryContainer;
   static Color lightSecondary = AppColorsManager.lightSecondary;
@@ -23,7 +24,7 @@ class AppColors {
   static Color lightColor3 = AppColorsManager.lightColor3;
   static Color lightColor4 = AppColorsManager.lightColor4;
 
-  // ألوان الوضع الداكن
+
   static Color darkPrimary = AppColorsManager.darkPrimary;
   static Color darkPrimaryContainer = AppColorsManager.darkPrimaryContainer;
   static Color darkSecondary = AppColorsManager.darkSecondary;
@@ -42,7 +43,7 @@ class AppColors {
   static Color darkColor3 = AppColorsManager.darkColor3;
   static Color darkColor4 = AppColorsManager.darkColor4;
 
-  // دالة لاختيار الألوان بناءً على الوضع الداكن أو الفاتح
+
   static Color getPrimaryColor(bool isDarkMode) {
     return isDarkMode ? darkPrimary : lightPrimary;
   }
@@ -95,7 +96,7 @@ class AppColors {
     return isDarkMode ? darkShadowColor : lightShadowColor;
   }
 
-  // دوال للألوان الإضافية
+
   static Color getLightColor1(bool isDarkMode) {
     return isDarkMode ? darkColor1 : lightColor1;
   }

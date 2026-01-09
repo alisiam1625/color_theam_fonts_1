@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:color_theam_fonts/color_theam_fonts.dart';
+import 'package:color_theam_fonts/color_theme_fonts.dart';
 
 void main() {
   test('adds one to input values', () {

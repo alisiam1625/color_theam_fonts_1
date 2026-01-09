@@ -1,53 +1,50 @@
 import 'package:flutter/material.dart';
 
 class AppColorsManager {
-  // الألوان الافتراضية للوضع الفاتح
+
   static List<Color> defaultLightColors = [
-    Colors.purple, // اللون الأساسي
-    Color(0xFFD1C4E9), // اللون الأساسي للحاويات
-    Colors.amber, // اللون الثانوي
-    Color(0xFFFFF8E1), // اللون الثانوي للحاويات
-    Colors.white, // خلفية الشاشة
-    Colors.white, // الخلفية العامة
-    const Color.fromARGB(255, 157, 43, 35), // لون الأخطاء
-    Colors.white, // اللون على العناصر الأساسية
-    Colors.black, // اللون على العناصر الثانوية
-    Colors.black, // اللون على الخلفية
-    Colors.white, // اللون على الأخطاء
-    Colors.white, // لون البطاقات
-    Colors.grey, // لون الظلال للبطاقات
-    Colors.blue, // لون مخصص 1
-    Colors.green, // لون مخصص 2
-    Colors.red, // لون مخصص 3
-    Colors.orange, // لون مخصص 4
+    Colors.purple, 
+    Color(0xFFD1C4E9), 
+    Colors.amber,
+    Color(0xFFFFF8E1),
+    Colors.white,
+    const Color.fromARGB(255, 157, 43, 35),
+    Colors.white,
+    Colors.black, 
+    Colors.black, 
+    Colors.white, 
+    Colors.white, 
+    Colors.grey, 
+    Colors.blue, 
+    Colors.green, 
+    Colors.red, 
+    Colors.orange, 
   ];
 
-  // الألوان الافتراضية للوضع الداكن
+
   static List<Color> defaultDarkColors = [
-    Colors.cyan, // اللون الأساسي
-    Color(0xFF006064), // اللون الأساسي للحاويات
-    Colors.teal, // اللون الثانوي
-    Color(0xFF004D40), // اللون الثانوي للحاويات
-    Colors.black, // خلفية الشاشة
-    Colors.black, // الخلفية العامة
-    Colors.red, // لون الأخطاء
-    Colors.black, // اللون على العناصر الأساسية
-    Colors.white, // اللون على العناصر الثانوية
-    Colors.white, // اللون على الخلفية
-    Colors.black, // اللون على الأخطاء
-    Colors.black, // لون البطاقات
-    Colors.grey, // لون الظلال للبطاقات
-    Colors.purple, // لون مخصص 1
-    Colors.yellow, // لون مخصص 2
-    Colors.pink, // لون مخصص 3
-    Colors.lime, // لون مخصص 4
+    Colors.cyan, 
+    Color(0xFF006064), 
+    Colors.teal,
+    Color(0xFF004D40),
+    Colors.black,
+    Colors.black, 
+    Colors.red,
+    Colors.black, 
+    Colors.white,
+    Colors.white, 
+    Colors.black, 
+    Colors.black, 
+    Colors.grey,
+    Colors.purple, 
+    Colors.yellow, 
+    Colors.pink, 
+    Colors.lime, 
   ];
 
-  // القيم الحالية، تبدأ بالقيم الافتراضية
   static List<Color> _currentLightColors = List.from(defaultLightColors);
   static List<Color> _currentDarkColors = List.from(defaultDarkColors);
 
-  // طرق الوصول للألوان
   static Color get lightPrimary => _currentLightColors[0];
   static Color get lightPrimaryContainer => _currentLightColors[1];
   static Color get lightSecondary => _currentLightColors[2];
@@ -84,7 +81,7 @@ class AppColorsManager {
   static Color get darkColor3 => _currentDarkColors[15];
   static Color get darkColor4 => _currentDarkColors[16];
 
-  // دوال لتحديث الألوان
+
 
   static void updateLightPrimary(Color color) {
     _currentLightColors[0] = color;
@@ -154,11 +151,6 @@ class AppColorsManager {
     _currentLightColors[16] = color;
   }
 
-
-
-
-
-
   static void updateDarkPrimary(Color color) {
     _currentDarkColors[0] = color;
   }
@@ -227,16 +219,101 @@ class AppColorsManager {
     _currentDarkColors[16] = color;
   }
 
-  static void updateLightColors(List<Color>? newColors) {
+  static void updateLightColors({
+    required Color primary,
+    required Color primaryContainer,
+    required Color secondary,
+    required Color secondaryContainer,
+    required Color screenBackground,
+    required Color background,
+    required Color error,
+    required Color onPrimary,
+    required Color onSecondary,
+    required Color onBackground,
+    required Color onError,
+    required Color card,
+    required Color cardShadow,
+    required Color optionColor1,
+    required Color optionColor2,
+    required Color optionColor3,
+    required Color optionColor4,
+  }) {
+    List<Color> newColors = [
+      primary,
+      primaryContainer,
+      secondary,
+      secondaryContainer,
+      screenBackground,
+      background,
+      error,
+      onPrimary,
+      onSecondary,
+      onBackground,
+      onError,
+      card,
+      cardShadow,
+      optionColor1,
+      optionColor2,
+      optionColor3,
+      optionColor4,
+    ];
     if (newColors != null && newColors.length == defaultLightColors.length) {
+
+
+
+
+
+
+
+
+
+
+      
       _currentLightColors = List.from(newColors);
     } else {
       _currentLightColors = List.from(defaultLightColors);
     }
   }
 
-  // دالة لتحديث ألوان الوضع الداكن
-  static void updateDarkColors(List<Color>? newColors) {
+  static void updateDarkColors({
+    required Color primary,
+    required Color primaryContainer,
+    required Color secondary,
+    required Color secondaryContainer,
+    required Color screenBackground,
+    required Color background,
+    required Color error,
+    required Color onPrimary,
+    required Color onSecondary,
+    required Color onBackground,
+    required Color onError,
+    required Color card,
+    required Color cardShadow,
+    required Color optionColor1,
+    required Color optionColor2,
+    required Color optionColor3,
+    required Color optionColor4,
+  }) {
+    List<Color> newColors = [
+      primary,
+      primaryContainer,
+      secondary,
+      secondaryContainer,
+      screenBackground,
+      background,
+      error,
+      onPrimary,
+      onSecondary,
+      onBackground,
+      onError,
+      card,
+      cardShadow,
+      optionColor1,
+      optionColor2,
+      optionColor3,
+      optionColor4,
+    ];
+
     if (newColors != null && newColors.length == defaultDarkColors.length) {
       _currentDarkColors = List.from(newColors);
       print("color styles updated successfully.---------------");
@@ -246,5 +323,3 @@ class AppColorsManager {
     }
   }
 }
-
-
