@@ -106,12 +106,24 @@ class _MyAppState extends State<MyApp> {
       displayLarge: GoogleFonts.bebasNeue(fontSize:  30.sp, color: const Color.fromARGB(255, 223, 92, 92)),
       headlineLarge: GoogleFonts.bebasNeue(fontSize:  20.sp, color: Colors.black),
     );
+    TextThemeDefaults.updateDarkTextStyles(
+      displayLarge: GoogleFonts.bebasNeue(fontSize:  30.sp, color: const Color.fromARGB(255, 238, 144, 144)),
+      headlineLarge: GoogleFonts.bebasNeue(fontSize:  20.sp, color: const Color.fromARGB(255, 227, 218, 218)),
+    );
 
     AppColorsManager.updateLightColors(
       primary: const Color.fromARGB(255, 252, 2, 210),
       secondary: Colors.green,
       background: const Color.fromARGB(255, 221, 30, 30),
     );
+    
+    AppColorsManager.updateDarkColors(
+      primary: const Color.fromARGB(255, 250, 164, 235),
+      secondary: Colors.green,
+      background: const Color.fromARGB(255, 221, 30, 30),
+    );
+
+
         return MaterialApp(
           theme: AllTheme.lightTheme(),
           darkTheme: AllTheme.darkTheme(),
