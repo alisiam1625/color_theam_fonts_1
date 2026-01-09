@@ -4,9 +4,9 @@ class AppColorsManager {
 
   static List<Color> defaultLightColors = [
     Colors.purple, 
-    Color(0xFFD1C4E9), 
+    Colors.white,
     Colors.amber,
-    Color(0xFFFFF8E1),
+    Colors.white,
     Colors.white,
     const Color.fromARGB(255, 157, 43, 35),
     Colors.white,
@@ -24,9 +24,9 @@ class AppColorsManager {
 
   static List<Color> defaultDarkColors = [
     Colors.cyan, 
-    Color(0xFF006064), 
+    Colors.green,
     Colors.teal,
-    Color(0xFF004D40),
+    Colors.green,
     Colors.black,
     Colors.black, 
     Colors.red,

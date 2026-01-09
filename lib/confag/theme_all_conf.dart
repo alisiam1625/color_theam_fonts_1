@@ -1,4 +1,5 @@
-import 'package:color_theam_fonts/text_theme_defult.dart';
+
+import 'package:color_theme_fonts/text_theme_defult.dart';
 import 'package:flutter/material.dart';
 
 
@@ -10,7 +11,7 @@ class AllTheme {
       scaffoldBackgroundColor: AppColors.getBackgroundColor(false),
       brightness: Brightness.light,
       primaryColor: AppColors.getPrimaryColor(false),
-      textTheme: TTextTheme.lightTextTheme(),
+      textTheme: TtextTheme.lightTextTheme(),
       secondaryHeaderColor: AppColors.getSecondaryColor(false),
       cardColor: AppColors.getCardColor(false),
       shadowColor: AppColors.getShadowColor(false),
@@ -64,7 +65,7 @@ class AllTheme {
       cardColor: AppColors.getCardColor(true),
       shadowColor: AppColors.getShadowColor(true),
       primaryColorDark: AppColors.getBackgroundColor(true),
-      textTheme: TTextTheme.darkTextTheme(),
+      textTheme: TtextTheme.darkTextTheme(),
       colorScheme: ColorScheme.dark(
         primary: AppColors.getPrimaryColor(true),
         primaryContainer: AppColors.getPrimaryContainerColor(true),

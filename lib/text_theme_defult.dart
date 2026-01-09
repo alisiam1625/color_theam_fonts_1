@@ -1,9 +1,10 @@
-import 'package:color_theam_fonts/defult_text.dart';
+
+import 'package:color_theme_fonts/defult_text.dart';
 import 'package:flutter/material.dart';
 
 
 
-class TTextTheme {
+class TtextTheme {
   static TextTheme lightTextTheme() {
     return TextTheme(
       displayLarge: TextThemeDefaults.lightDisplayLarge,
